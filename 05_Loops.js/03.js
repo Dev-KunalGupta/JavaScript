@@ -41,3 +41,7 @@ const myCoding = [
 myCoding.forEach((item, index, json)=>{
     // console.log(item, index, json)
 })
+
+myCoding.forEach( (item) => {
+    // console.log(item.languageName);
+} )
