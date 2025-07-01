@@ -18,10 +18,10 @@
     div.style.backgroundColor = 'red'
     div.style.padding = '15px'
 
-    // div.innerText = 'Kunal'
+    // div.innerText = 'Kunal'  // traverse though whole DOM tree(not optimal)
 
     const text = document.createTextNode('Kunal')  // saves one roundtrip time
-    div.appendChild(text)                     // but this will take extra time
+    div.appendChild(text)                 // but this line can take extra time
 
     document.body.appendChild(div)
 </script>
