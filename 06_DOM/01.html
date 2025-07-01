@@ -17,6 +17,24 @@
 </body>
 <script>
     const parent = document.querySelector('.parent')
-    console.log(parent)
+    // console.log(parent.children[0].innerHTML)
+
+    // for (let index = 0; index < parent.children.length; index++) {
+    //     // console.log(parent.children[index].innerHTML)
+    // }
+
+    // access parent --> child (less efficient)
+    // console.log(parent.firstElementChild)
+    // console.log(parent.lastElementChild)
+
+    // access child --> parent (more efficient)
+    // const dayOne = document.querySelector('.day')
+    // console.log(dayOne)
+    // console.log(dayOne.parentElement)
+    // console.log(dayOne.nextElementSibling)
+
+    console.log("NODES: ",parent.childNodes)
+
+
 </script>
 </html>
