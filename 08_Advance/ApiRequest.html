@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body style="background-color: #212121; color: beige;">
+    <!-- 0	UNSENT	:Client has been created. open() not called yet.
+    1	OPENED	:open() has been called.
+    2	HEADERS_RECEIVED	:send() has been called,and headers  and status are available.
+    3	LOADING	  :Downloading; responseText holds partial data.
+    4	DONE	  :The operation is complete. -->
+</body>
+<script>
+    let profilePic = '';
+    let followers = 0;
+    
+    const requestUrl = 'https://api.github.com/users/hiteshchoudhary';
+    const xhr = new XMLHttpRequest();
+    // console.log(xhr.readyState);                //0
+    xhr.open('GET', requestUrl);
+    // console.log(xhr.readyState);                //1
+
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState);
+        if(xhr.readyState === 4){
+            const data = JSON.parse(this.responseText);
+            profilePic = data.avatar_url;
+            followers = data.followers;
+        }
+    }
+    xhr.send();
+   
+    const div = document.createElement('div')
+    div.id = 'card'
+    div.style.height = '400px';
+    div.style.width = '500px';
+    div.style.border = '1px solid white';
+    div.style.padding = '5px';
+    div.style.textAlign = 'center';
+    div.style.backgroundColor = 'black'
+    div.style.margin = '10px';
+    document.body.appendChild(div)
+
+    const button = document.createElement('button')
+    button.style.padding = '5px';
+    button.style.margin = '10px';
+    document.body.appendChild(button);
+
+    const text = document.createTextNode("Click Here")
+    button.appendChild(text)
+
+    function showProfile(){
+        div.innerHTML = '';
+        
+        const img = document.createElement('img');
+        img.src = profilePic;
+        img.style.height = '300px';
+        img.alt = 'Profile Picture';
+        div.appendChild(img);
+
+        const h2 = document.createElement('h2');
+        h2.innerText = `Followers: ${followers}`;
+        div.appendChild(h2);
+    }
+
+    button.addEventListener('click', showProfile)
+</script>
+</html>
