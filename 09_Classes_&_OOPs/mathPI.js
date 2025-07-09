@@ -3,7 +3,7 @@
 // console.log(Math.PI);
 
 // const descriptor = Object.getOwnPropertyDescriptor(Math, 'PI');
-// console.log(descriptor);     // The reason.
+// console.log(descriptor);     // The reason is here
 
 const chai = {
     name: 'ginger chai',
