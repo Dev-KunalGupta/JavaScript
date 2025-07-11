@@ -7,5 +7,3 @@ String.prototype.trueLength = function(){
 }
 
 console.log(myName.trueLength());
-//Yeah we made it..
-
