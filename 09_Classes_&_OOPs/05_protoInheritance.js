@@ -19,12 +19,12 @@ const TASupport = {
 
 Teacher.__proto__ = User
 
-// console.log(Teacher.name)                    chai
+// console.log(Teacher.name)                    // chai
 
-// modern syntax
+// Modern syntax
 Object.setPrototypeOf(TeachingSupport, Teacher)
 
-// console.log(TeachingSupport.makeVideo)       true
+// console.log(TeachingSupport.makeVideo)      // true
 
 let anotherUsername = "ChaiAurCode     ";
 
