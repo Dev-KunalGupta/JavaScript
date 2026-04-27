@@ -2,7 +2,7 @@
 // Why???
 // 2 major reasons ************
 
-// (i) For immediately execution
+// (i)  For immediately execution
 // (ii) To deal with global scope pollution
 
 // To write two or multiple IIFE one should be end with semicolon ; bcoz invoke ho jata hai par pata nhi rukna kaha hai

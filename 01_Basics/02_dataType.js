@@ -1,6 +1,6 @@
 "use strict" //Treat JS code as new version
 
-// alert(2+3) Running on node.js not on browser
+// alert(2+3) Running on node.js not on browser that's why it is giving: ReferenceError: alert is not defined
 
 /*
     JS DATATYPES ---> Primitives

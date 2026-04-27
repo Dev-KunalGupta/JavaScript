@@ -41,7 +41,7 @@ if (true) {
 // console.log(username);                   error can't access
 
 
-// ++++++++++++++++++ interesting ++++++++++++++++++
+// ++++++++++++++++++ interesting ++++++++++++++++++++
 
 
 console.log(addone(5))
